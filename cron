@@ -1,0 +1,15 @@
+pipeline {
+  agent { lable 'master' }
+  triggers {
+    corn('H/15 * * * *')
+  }
+  stages {
+    stage('BUILD') {
+       steps {
+          sh 'echo this is my first stage in pipeline job'
+					sh 'ls -lrt'
+					sh 'sleep 5'
+       }
+    }  
+  }
+}
