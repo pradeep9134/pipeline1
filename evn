@@ -1,0 +1,18 @@
+pipeline {
+  agent any
+    environment {
+      NAME = 'my-name'
+      }
+      stages {
+        stage('BUILD'){
+          environment {
+           STAGE_NAME = 'build'
+            }
+           steps {
+						sh 'echo this is my first stage in pipeline job'
+						sh 'ls -lrt'
+						sh 'sleep 5'
+				}
+      }
+    }
+  }
