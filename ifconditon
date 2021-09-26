@@ -9,7 +9,7 @@ pipeline {
         STAGE_NAME = 'build'
     }
     steps {
-      def br_name = "${params.DEV}"
+      def br_name = "${params.DENV}"
       if (br_name == "TEST") {
         echo "deploying to TEST environment"
       }else if (br_name == "QA") {
