@@ -4,8 +4,9 @@ pipeline{
              booleanparam(name: "RELEASE", defaultvalue: false)
     }
       stages {
+    
           stage("build"){
-            step {
+            steps {
               sh "./fact.sh"
             }
         }
