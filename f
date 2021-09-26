@@ -9,7 +9,7 @@ pipeline{
               sh "./fact.sh"
             }
         }
-     stage("publish" {
+     stage("publish") {
       steps {
         script{
              if (params.RELEASE){
