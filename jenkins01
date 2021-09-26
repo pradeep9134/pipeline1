@@ -21,6 +21,7 @@ pipeline {
 				sh ''' 
 					sleep 5
 					du -h 
+					ls -lrt
 				   '''
 			}
 		}
